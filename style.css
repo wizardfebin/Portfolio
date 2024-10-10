@@ -64,14 +64,36 @@ body[data-theme='dark'] button {
 
 /* Navigation Menu */
 /* Navbar Background */
-nav {
-    background: var(--nav-bg);
-    position: fixed; /* Fix the navbar at the top */
-    top: 0; /* Position it at the top */
-    left: 0; /* Align to the left */
-    width: 100%; /* Full width */
-    z-index: 1000; /* Ensure it stays above other content */
-    transition: background-color 0.3s; /* Smooth transition for background color */
+    nav {
+        background: var(--nav-bg);
+        position: fixed; /* Fix the navbar at the top */
+        top: 0; /* Position it at the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        z-index: 1000; /* Ensure it stays above other content */
+        transition: background-color 0.3s; /* Smooth transition for background color */
+    }
+nav a {
+    text-decoration: none; /* Removes underline from links */
+    font-size: 18px; /* Adjusts font size */
+    margin: 0 15px; /* Adds space between links */
+    background: linear-gradient(90deg, #4409e9, #ee0979, #e608ff); /* Gradient colors */
+    background-size: 300%; /* Extends background size for animation */
+    -webkit-background-clip: text; /* Clips background to the text */
+    -webkit-text-fill-color: transparent; /* Makes text color transparent */
+    animation: gradient-animation 3s ease-in-out infinite; /* Animation for the gradient */
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Navbar List Styles */
@@ -91,15 +113,9 @@ nav ul li {
 /* Navbar Link Styles */
 nav ul li a {
     text-decoration: none; /* No underline */
-    font-size: 18px; /* Adjusts font size */
     color: var(--link-color); /* Text color from variable */
     font-weight: bold; /* Bold text */
     transition: color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
-    background: linear-gradient(90deg, #4409e9, #ee0979, #e608ff); /* Gradient colors */
-    background-size: 300%; /* Extends background size for animation */
-    -webkit-background-clip: text; /* Clips background to the text */
-    -webkit-text-fill-color: transparent; /* Makes text color transparent */
-    animation: gradient-animation 3s ease-in-out infinite; /* Animation for the gradient */
 }
 
 /* Link Hover Effects */
@@ -107,48 +123,44 @@ nav ul li a:hover {
     color: var(--link-hover-color); /* Hover color from variable */
     transform: scale(1.05); /* Scale effect on hover */
 }
-
-/* Keyframes for Gradient Animation */
-@keyframes gradient-animation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+nav .hamburger {
+    display: none; /* Hide hamburger button by default */
+    font-size: 24px; /* Adjust size of the hamburger icon */
+    background: none; /* No background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer on hover */
+    color: var(--link-color); /* Color of hamburger icon */
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    nav {
+    nav .nav-list {
         flex-direction: column; /* Stack items vertically */
-        padding: 10px; /* Add padding */
-    }
-
-    nav ul {
-        flex-direction: column; /* Stack nav items vertically */
         align-items: center; /* Center items */
+        padding: 10px; /* Padding around the navbar */
     }
 
     nav ul li {
-        margin: 10px 0; /* Vertical margin for spacing */
+        margin: 5px 0; /* Vertical margin for spacing */
     }
 
     nav ul li a {
         font-size: 16px; /* Smaller font size on mobile */
     }
-    header {
-        padding: 10px; /* Reduce header padding */
-    }
 }
 
-@media (max-width: 480px) {
-    nav ul li a {
-        font-size: 14px; /* Further reduce font size for very small screens */
-    }
+/* Navbar Item Styles */
+nav ul li {
+    margin: 3px 0; /* Vertical spacing for stacked items */
+}
+
+/* Navbar Link Styles */
+nav ul li a {
+    text-decoration: none; /* No underline */
+    font-size: 18px; /* Adjusts font size */
+    color: var(--link-color); /* Text color from variable */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
 }
 
 /* Body Margin to Prevent Content from Hiding Behind the Navbar */
@@ -190,8 +202,15 @@ body {
     border-image-slice: 1; /* Ensures the gradient covers the entire border */
     
     animation: gradient-border 2s linear infinite; /* Animate the border gradient */
+    /* Adjust this value based on the height of your navbar */
 
 }
+@media (max-width: 768px) {
+    .section {
+        padding-top: 100px; /* Adjust as needed for mobile view */
+    }
+}
+
 
 .section:hover {
     background: var(--project-bg-hover);
@@ -537,89 +556,62 @@ a:focus, button:focus {
     display: flex; /* Use flexbox for layout */
     align-items: center; /* Vertically center the items */
     gap: 20px; /* Space between image and text */
-}
-.home-content {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Vertically center the items */
-    gap: 20px; /* Space between image and text */
-    max-width: 1200px; /* Set a maximum width */
-    margin: 0 auto; /* Center the content */
-    padding: 20px; /* Add some padding */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: center; /* Center items in the container */
 }
 
-.image-container {
-    flex: 1; /* Allow the image container to grow */
-}
-
-.text-container {
-    flex: 2; /* Allow the text container to grow more */
-}
-
-.main-image {
-    max-width: 100%; /* Responsive image */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Optional: Add border radius */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .home-content {
-        flex-direction: column; /* Stack items vertically */
-        align-items: flex-start; /* Align items to the start */
-        gap: 15px; /* Adjust gap */
-    }
-}
-
-@media (max-width: 480px) {
-    .section-name {
-        font-size: 32px; /* Adjust font size for small screens */
-    }
-
-    .home-content {
-        padding: 10px; /* Reduce padding for smaller screens */
-    }
-}
-
-
+/* Image container styling */
 .image-container {
     flex: 0 0 auto; /* Prevent the image from growing */
-    overflow: hidden; /* To clip the image corners */
+    overflow: hidden; /* Clip the image corners */
     border-radius: 50%; /* Make it completely circular */
-    transition: box-shadow 0.3s; /* Smooth transition for hover effect */
+    transition: box-shadow 0.3s, transform 0.3s; /* Smooth transition for hover effect */
     border: 5px solid transparent; /* Add a transparent border for the gradient */
-    /* border-image: linear-gradient(to right, var(--gradient1), var(--gradient2), var(--gradient3)) 1;  */
     width: 250px; 
     height: 250px;
     display: flex;  
     align-items: center; 
     justify-content: center;  
     background: none; /* No background */
-    border: none; /* Remove border */
     padding: 0;
     margin: 0;
-
-
-    
 }
 
+/* Image styling */
 .image-container img {
-    width: 250px; 
-    height: 230px;
+    width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 50%; /* Make the image fully round */
     display: block;
-    /* object-fit: cover; Ensure the entire image fits inside the container */
+    object-fit: cover; /* Ensure the entire image fits inside the container */
 }
-/* 
-.image-container:hover {
-    box-shadow: 0 0 30px rgba(47, 47, 192, 0.8), 0 0 60px rgba(0, 0, 255, 1);
-    border: none;
-} */
 
+/* Hover effect for image container */
+.image-container:hover {
+    box-shadow: 0 0 20px rgba(47, 47, 192, 0.8), 0 0 30px rgba(0, 0, 255, 1); /* Add a glowing effect */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Main image styling */
 .main-image {
-    max-width: 200px; /* Set a max width for the image */
+    max-width: 100%; /* Set a max width for the image to be responsive */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Optional: add rounded corners */
     display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text for better readability */
+    }
+
+    .image-container {
+        width: 200px; /* Reduce width on smaller screens */
+        height: 200px; /* Reduce height on smaller screens */
+    }
 }
 
 .text-container {
