@@ -1,0 +1,608 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif; /* Use a modern font */
+    line-height: 2; /* Improve readability */
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+/* Header Styling */
+header {
+    background: var(--header-bg);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+   }
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+h3 {
+    text-transform: uppercase; /* Make headings stand out */
+    letter-spacing: 1px; /* Add space between letters */
+    color: #4ebcda; /* Main heading color */
+    margin-bottom: 10px; /* Space below headings */
+}
+
+/* Theme Toggle Button */
+button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 24px;
+    transition: transform 0.2s;
+    color: var(--text-color);
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+body[data-theme='dark'] button {
+    color: #f0c040;
+}
+
+
+
+/* Navigation Menu */
+/* Navbar Background */
+nav {
+    background: var(--nav-bg);
+    position: fixed; /* Fix the navbar at the top */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays above other content */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+nav a {
+    text-decoration: none; /* Removes underline from links */
+    font-size: 18px; /* Adjusts font size */
+    margin: 0 15px; /* Adds space between links */
+    background: linear-gradient(90deg, #4409e9, #ee0979, #e608ff); /* Gradient colors */
+    background-size: 300%; /* Extends background size for animation */
+    -webkit-background-clip: text; /* Clips background to the text */
+    -webkit-text-fill-color: transparent; /* Makes text color transparent */
+    animation: gradient-animation 3s ease-in-out infinite; /* Animation for the gradient */
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Navbar List Styles */
+nav ul {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the items */
+    padding: 10px 0; /* Padding around the navbar */
+    list-style: none; /* Remove bullet points */
+    margin: 0; /* No margin */
+}
+
+/* Navbar Item Styles */
+nav ul li {
+    margin: 0 15px; /* Spacing between items */
+}
+
+/* Navbar Link Styles */
+nav ul li a {
+    text-decoration: none; /* No underline */
+    color: var(--link-color); /* Text color from variable */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
+}
+
+/* Link Hover Effects */
+nav ul li a:hover {
+    color: var(--link-hover-color); /* Hover color from variable */
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Body Margin to Prevent Content from Hiding Behind the Navbar */
+body {
+    margin-top: 60px; /* Adjust this to match your navbar height */
+}
+
+/* Optional: Change navbar background color on scroll */
+.sticky {
+    background-color: #275d9a; /* Darker background when scrolling */
+}
+
+
+/* Section Styling */
+@keyframes gradient-border {
+    0% {
+        border-image: linear-gradient(to right, var(--gradient1), var(--gradient2), var(--gradient3)) 1; /* Gradient border */
+    }
+    50% {
+        border-image: linear-gradient(to right, var(--gradient2), var(--gradient1), var(--gradient3)) 1; /* Gradient border */
+    }
+    100% {
+        border-image: linear-gradient(to right, var(--gradient3), var(--gradient2), var(--gradient1)) 1; /* Gradient border */
+    }
+}
+
+.section {
+    background: var(--project-bg);
+    padding: 60px 20px;
+    text-align: center;
+    /* transition: background 0.5s ease-in-out; */
+    transition: transform 0.5s ease-in-out;
+    max-width: 1200px; /* Limits the content width */
+    margin: 20px auto; /* Centers the section content */
+    border-radius: 10px; /* Adds rounded corners */
+    
+    /* Create a colorful gradient border */
+    border: 2px solid; /* Define a solid border */
+    border-image-slice: 1; /* Ensures the gradient covers the entire border */
+    
+    animation: gradient-border 2s linear infinite; /* Animate the border gradient */
+}
+
+.section:hover {
+    background: var(--project-bg-hover);
+    transform: scale(1.05);}
+
+
+.section h2 {
+    text-align: justify;
+}
+
+.section p {
+    text-align: justify;
+}
+
+
+/* Project Container */
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Added gap to ensure equal spacing between items */
+}
+
+.project {
+    background: var(--project-bg);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: calc(33.333% - 40px); /* Adapts to screen size and flex gap */
+    min-width: 250px; /* Ensures projects remain readable on small screens */
+
+}
+
+.projects-container .project:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.5); /* Glowing effect */
+
+}
+.project p {
+    text-align: justify;
+}
+@keyframes jump {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); /* Original position */
+    }
+    40% {
+        transform: translateY(-10px); /* Move up by 10px */
+    }
+    60% {
+        transform: translateY(-5px); /* Move up by 5px */
+    }
+}
+
+#github {
+    animation: jump 1s infinite; /* Apply jump animation continuously */
+}
+
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Make project boxes full-width on small screens */
+@media screen and (max-width: 768px) {
+    .project {
+        width: 100%;
+    }
+}
+
+/* Skills Section */
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.skill-box {
+    background-color: var(--project-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 120px;
+    height: 120px;
+    opacity: 0; /* Start hidden */
+    position: relative; /* For positioning off-screen */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.skill-box.hidden {
+    transform: translateX(-100vw); /* Move off-screen to left */
+}
+
+.skill-box:nth-child(2) {
+    transform: translateY(-100vh); /* Move off-screen to top */
+}
+
+.skill-box:nth-child(3) {
+    transform: translateX(100vw); /* Move off-screen to right */
+}
+
+.skill-box:nth-child(4) {
+    transform: translateY(100vh); /* Move off-screen to bottom */
+}
+
+.skill-box:nth-child(5) {
+    transform: translateX(-100vw); /* Move off-screen to left */
+}
+
+.skill-box:nth-child(6) {
+    transform: translateY(-100vh); /* Move off-screen to top */
+}
+
+.skill-box:nth-child(7) {
+    transform: translateX(100vw); /* Move off-screen to right */
+}
+
+.skill-box:nth-child(8) {
+    transform: translateY(100vh); /* Move off-screen to bottom */
+}
+
+.skill-box:nth-child(9) {
+    transform: translateX(-100vw); /* Move off-screen to left */
+}
+
+.skill-box:nth-child(10) {
+    transform: translateY(-100vh); /* Move off-screen to top */
+}
+
+.skill-box:nth-child(11) {
+    transform: translateX(100vw); /* Move off-screen to right */
+}
+
+.skill-box:nth-child(12) {
+    transform: translateY(100vh); /* Move off-screen to bottom */
+}
+
+.skill-box:nth-child(13) {
+    transform: translateX(-100vw); /* Move off-screen to left */
+}
+
+.skill-box:nth-child(14) {
+    transform: translateY(-100vh); /* Move off-screen to top */
+}
+
+.skill-box:nth-child(15) {
+    transform: translateX(100vw); /* Move off-screen to right */
+}
+
+.skill-box:nth-child(16) {
+    transform: translateY(100vh); /* Move off-screen to bottom */
+}
+
+.skill-box.visible {
+    opacity: 1; /* Make it visible */
+    transform: translateY(0); /* Reset to its original position */
+    /* animation: magic 1s ; //ease forwards; Add magic animation */
+}
+
+.skill-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+.skill-box:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.5); /* Glowing effect */
+}
+@keyframes magic {
+    0% {
+        transform: scale(0.8); /* Start smaller */
+        opacity: 0; /* Invisible */
+    }
+    50% {
+        transform: scale(1.1); /* Slightly larger */
+        opacity: 1; /* Fully visible */
+    }
+    100% {
+        transform: scale(1); /* Original size */
+    }
+}
+.skill-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease; /* Add transition for the icon */
+
+}
+.skill-box:hover .skill-icon {
+    transform: rotate(360deg); /* Rotate on hover */
+}
+.skill-box p {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.skill-box i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.skill-box p {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--footer-bg);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Adds shadow to footer */
+}
+
+/* Light Theme */
+:root {
+    --link-color: #4a90e2; /* Primary link color */
+    --link-hover-color: #f0c040; /* Hover color */
+    --header-bg:   #5479a5;;
+    --primary-color: #fff;
+    --nav-bg: #5479a5;;
+    --link-color: #fff;
+    --link-hover-color: #f0c040;
+    --project-bg: #517baf;;
+    --footer-bg: #222;
+    --background:  #5479a5; /* Pale Cyan */
+    --text-color: #0e0c0c;
+    --gradient1: #df04b0; /* Pink */
+    --gradient2: #33e1ff; /* Light Blue */
+    --gradient3: #f60c0c; /* Purple */
+    /* --section-background: linear-gradient(to bottom, #ffffff, #f4f4f4); */
+    
+}
+
+/* Dark Theme */
+body[data-theme='dark'] {
+    --header-bg: #222;
+    --primary-color: #fff;
+    --nav-bg: #222;
+    --link-color: #fff;
+    --link-hover-color: #f0c040;
+    --project-bg: #333;
+    --footer-bg: #111;
+    --background: #121212;
+    --background: #000; /* Changed to black */
+
+    --text-color: #fff;
+    --link-color: #f0c040; /* Primary link color in dark mode */
+    --link-hover-color: #4a90e2; /* Hover color in dark mode */
+
+}
+a {
+    text-decoration: none; /* Remove underline */
+}
+.special-link {
+    color: #073a70; /* Color for light mode */
+    font-weight: bold; /* Bold text */
+}
+body[data-theme='dark'] .special-link {
+    color: #2f5ec5; /* Color for dark mode (e.g., gold) */
+}
+
+body[data-theme='dark'] .social-link {
+    color: #368fc3; /* Color for dark mode (e.g., gold) */
+}
+/* Hover Effects for Links */
+.special-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Dark Theme Hover Effects for Links */
+body[data-theme='dark'] .special-link:hover {
+    color: #FF6347; /* Change color on hover in dark mode (e.g., tomato) */
+}
+
+/* Main Styling */
+/* Main Styling */
+main {
+    color: var(--text-color);
+}
+
+
+/* Smooth Scroll for Navigation Links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus Styles for Accessibility */
+a:focus, button:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
+}
+
+.social-links {
+    display: flex;
+    align-items: center; 
+    
+    justify-content: center; /* Center icons vertically */
+    /* margin-right: auto; Push the theme toggle button to the right */
+}
+
+.social-icon {
+    margin-right: 15px; /* Spacing between icons */
+    color: inherit; /* Inherit color */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.5rem; /* Icon size */
+}
+
+.cv-link {
+    margin-left: 15px; /* Space before CV link */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color */
+    font-size: 1rem; /* CV link size */
+    display: flex; /* Ensure the link behaves like a flex item */
+    align-items: center; /* Center vertically if needed */
+}
+
+.download-button {
+    display: inline-block; /* Treat the link as a block */
+    padding: 10px 20px; /* Add padding for the button */
+    background-color: cornflowerblue; /* Background color */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background color transition */
+    font-size: 1rem; /* Font size */
+    margin-left: 15px; /* Spacing before the CV link */
+}
+
+.download-button:hover {
+    background-color: darkblue; /* Change background on hover */
+}
+
+.home-content {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically center the items */
+    gap: 20px; /* Space between image and text */
+}
+
+.image-container {
+    flex: 0 0 auto; /* Prevent the image from growing */
+    overflow: hidden; /* To clip the image corners */
+    border-radius: 50%; /* Make it completely circular */
+    transition: box-shadow 0.3s; /* Smooth transition for hover effect */
+    border: 5px solid transparent; /* Add a transparent border for the gradient */
+    /* border-image: linear-gradient(to right, var(--gradient1), var(--gradient2), var(--gradient3)) 1;  */
+    width: 250px; 
+    height: 250px;
+    display: flex;  
+    align-items: center; 
+    justify-content: center;  
+    background: none; /* No background */
+    border: none; /* Remove border */
+    padding: 0;
+    margin: 0;
+
+
+    
+}
+
+.image-container img {
+    width: 250px; 
+    height: 230px;
+    border-radius: 50%; /* Make the image fully round */
+    display: block;
+    /* object-fit: cover; Ensure the entire image fits inside the container */
+}
+/* 
+.image-container:hover {
+    box-shadow: 0 0 30px rgba(47, 47, 192, 0.8), 0 0 60px rgba(0, 0, 255, 1);
+    border: none;
+} */
+
+.main-image {
+    max-width: 200px; /* Set a max width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: add rounded corners */
+    display: block;
+}
+
+.text-container {
+    flex: 1; /* Allow text to take the remaining space */
+}
+
+.name {
+    font-size: 48px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #4409e9, #a60a55, #66097d); /* Gradient colors */
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 3s ease-in-out infinite; /* Animation for the gradient */
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.section-name {
+    font-size: 48px; /* Adjust font size */
+    font-weight: bold;
+    white-space: nowrap; /* Prevents wrapping */
+    overflow: hidden; /* Hides the text during animation */
+    border-right: 4px solid #4a90e2; /* Cursor effect */
+    width: 10ch; /* Limit width to the length of the text (adjust as necessary) */
+    animation: type 6s steps(12, end) forwards, blink-caret 0.75s infinite; /* Typewriter and blink */
+}
+
+@keyframes type {
+    from {
+        width: 0; /* Start with no text */
+    }
+    to {
+        width: 12ch; /* End with the full width (adjust to match text length) */
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent; /* Invisible caret */
+    }
+    50% {
+        border-color: #4a90e2; /* Cursor color */
+    }
+}
+

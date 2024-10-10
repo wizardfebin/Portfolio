@@ -1,919 +1,179 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="dp.jpeg" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Web site created using create-react-app" />
-    <link rel="apple-touch-icon" href="logo192.png" />
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&amp;display=swap" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <title>Midhun Raj</title>
-    <script defer="defer" src="/static/js/main.87b94c8d.js"></script>
-    <link href="/static/css/main.48826de3.css" rel="stylesheet" />
-    <style type="text/css">
-        .scroll-to-top {
-            background-color: white;
-            right: 40px;
-            bottom: 40px;
-            position: fixed;
-            z-index: 2;
-            cursor: pointer;
-            border-radius: 7px;
-            width: 40px;
-            height: 40px;
-            box-shadow: 0 9px 25px 0 rgba(132, 128, 177, 0.28);
-            border: none;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Febin Mathew - Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-        .scroll-to-top:active {
-            transform: matrix(0.95, 0, 0, 0.95, 0, 0);
-        }
-    </style>
-    <style data-emotion="css" data-s></style>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="name">Febin Mathew</h1>
+            <div class="social-links">
 
-<body classname="lightTheme" class="darkTheme" style>
-    <div id="root">
-        <div class="css-1c2fuzs" style="animation-delay: 0ms">
-            <div class="bgimg">
-                <nav class="navbarbg fixed-top navbar navbar-expand-lg navbar-light" style>
-                    <div class="container">
-                        <span class="d-flex navbar-brand"><span class="devname d-flex"
-                                style="vertical-align: top"><span class="ms-1" style="font-size: 80%">
-                                    </span></span></span><button aria-controls="basic-navbar-nav" type="button"
-                            aria-label="Toggle navigation" class="navbar-toggler collapsed" style>
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="border-0 text-center p-0 rounded-1 navbar-collapse collapse" id="basic-navbar-nav">
-                            <div class="ms-auto p-1 navbar-nav">
-                                <a href="#Home" data-rr-ui-event-key="#Home" class="ms-4 nav-link">
-                                    <div class="navlink">Home</div>
-                                </a><a href="#About" data-rr-ui-event-key="#About" class="ms-4 nav-link">
-                                    <div class="navlink">About</div>
-                                </a><a href="#Techstack" data-rr-ui-event-key="#Techstack" class="ms-4 nav-link">
-                                    <div class="navlink">Tech Stack</div>
-                                </a><a href="#Projects" data-rr-ui-event-key="#Projects" class="ms-4 nav-link">
-                                    <div class="navlink">Projects</div>
-                                </a><a href="#Contact" data-rr-ui-event-key="#Contact" class="ms-4 nav-link">
-                                    <div class="navlink">Contact</div>
-                                </a><a role="button" class="ms-4 nav-link" tabindex="0" href="#">
-                                    <svg viewBox="0 0 24 24" width="24" height="24"
-                                        class="pointer navlink lightToggleIcon_pyhR">
-                                        <path fill="currentColor"
-                                            d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z">
-                                        </path>
-                                    </svg></a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-                <div id="Home" class="maincontainer mt-3 my-3 my-lg-0 container">
-                    <div class="h-100 row">
-                        <div
-                            class="order-lg-2 d-flex align-items-center justify-content-center col-lg-5 col-md-7 col-sm-12">
-                            <div class="rightimg d-flex justify-content-lg-start align-items-center mt-5 mt-lg-0">
-                                <img src="./assets/" alt class="dpimg" />
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center ms-lg-5 col">
-                            <div>
-                                <div>
-                                    <div class="css-n5xi40" style="animation-delay: 0ms">
-                                        <h1 class="leftfirsthead">
-                                            Hi There!<span class="wave" role="img" aria-labelledby="wave">👋🏻</span>
-                                        </h1>
-                                    </div>
-                                    <div class="css-1jmteoh" style="animation-delay: 0ms">
-                                        <h1 class="leftsecondhead">
-                                            I'm <strong class="main-name">Febin Mathew</strong>
-                                        </h1>
-                                    </div>
-                                    <div class="css-1jmteoh" style="animation-delay: 0ms">
-                                        <div class=" ">
-                                            <h2 class="welcomtext">Front-end Developer</h2>
-                                        </div>
-                                    </div>
-                                    <div class="css-1jmteoh" style="animation-delay: 0ms">
-                                        <p class="description">
-                                            "Brief description with insights into myself, my
-                                            vocational journey and what i engage in professionally."
-                                        </p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="css-aq3aix" style="animation-delay: 0ms">
-                                        <div class="d-flex proicons row">
-                                            <div class="social-icons col-lg-1 col-md-2 col-sm-2 col-2">
-                                                <a href="https://github.com/MidhunrajGit0022" target="_blank"
-                                                    rel="noreferrer" class="home-social-icons"><span
-                                                        class="social-icons"><svg stroke="currentColor"
-                                                            fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
-                                                            height="20" width="20" xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z">
-                                                            </path>
-                                                        </svg></span></a>
-                                            </div>
-                                            <div class="social-icons col-lg-1 col-md-2 col-sm-2 col-2">
-                                                <a href="https://twitter.com/Midhun_raj0077" target="_blank"
-                                                    rel="noreferrer" class="home-social-icons"><span
-                                                        class="social-icons"><svg stroke="currentColor"
-                                                            fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
-                                                            height="20" width="20" xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
-                                                            </path>
-                                                        </svg></span></a>
-                                            </div>
-                                            <div class="social-icons col-lg-1 col-md-2 col-sm-2 col-2">
-                                                <a href="https://www.linkedin.com/in/midhunraj0022/" target="_blank"
-                                                    rel="noreferrer" class="home-social-icons"><span
-                                                        class="social-icons"><svg stroke="currentColor"
-                                                            fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
-                                                            height="20" width="20" xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM349.3 793.7H230.6V411.9h118.7v381.8zm-59.3-434a68.8 68.8 0 1 1 68.8-68.8c-.1 38-30.9 68.8-68.8 68.8zm503.7 434H675.1V608c0-44.3-.8-101.2-61.7-101.2-61.7 0-71.2 48.2-71.2 98v188.9H423.7V411.9h113.8v52.2h1.6c15.8-30 54.5-61.7 112.3-61.7 120.2 0 142.3 79.1 142.3 181.9v209.4z">
-                                                            </path>
-                                                        </svg></span></a>
-                                            </div>
-                                            <div class="social-icons col-lg-1 col-md-2 col-sm-2 col-2">
-                                                <a href="https://www.instagram.com/_mi_._dhun_/" target="_blank"
-                                                    rel="noreferrer" class="home-social-icons"><span
-                                                        class="social-icons"><svg stroke="currentColor"
-                                                            fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
-                                                            height="20" width="20" xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M512 378.7c-73.4 0-133.3 59.9-133.3 133.3S438.6 645.3 512 645.3 645.3 585.4 645.3 512 585.4 378.7 512 378.7zM911.8 512c0-55.2.5-109.9-2.6-165-3.1-64-17.7-120.8-64.5-167.6-46.9-46.9-103.6-61.4-167.6-64.5-55.2-3.1-109.9-2.6-165-2.6-55.2 0-109.9-.5-165 2.6-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6 46.9 46.9 103.6 61.4 167.6 64.5 55.2 3.1 109.9 2.6 165 2.6 55.2 0 109.9.5 165-2.6 64-3.1 120.8-17.7 167.6-64.5 46.9-46.9 61.4-103.6 64.5-167.6 3.2-55.1 2.6-109.8 2.6-165zM512 717.1c-113.5 0-205.1-91.6-205.1-205.1S398.5 306.9 512 306.9 717.1 398.5 717.1 512 625.5 717.1 512 717.1zm213.5-370.7c-26.5 0-47.9-21.4-47.9-47.9s21.4-47.9 47.9-47.9 47.9 21.4 47.9 47.9a47.84 47.84 0 0 1-47.9 47.9z">
-                                                            </path>
-                                                        </svg></span></a>
-                                            </div>
-                                            <div class="social-icons col-lg-1 col-md-2 col-sm-2 col-2">
-                                                <a href="mailto:midhunraj0022@gmail.com" target="_blank"
-                                                    rel="noreferrer" class="home-social-icons"><span
-                                                        class="social-icons"><svg stroke="currentColor"
-                                                            fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
-                                                            height="20" width="20" xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M928 160H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32zm-80.8 108.9L531.7 514.4c-7.8 6.1-18.7 6.1-26.5 0L189.6 268.9A7.2 7.2 0 0 1 194 256h648.8a7.2 7.2 0 0 1 4.4 12.9z">
-                                                            </path>
-                                                        </svg></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="css-aq3aix" style="animation-delay: 0ms">
-                                        <div class="row">
-                                            <div class="resumebtn">
-                                                <a href="./assets/cv.pdf" target="_blank"><button type="button"
-                                                        class="mt-4 rounded-5 btn btn-outline-light">
-                                                        Get Resume
-                                                    </button></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div id="About" class="container">
-                        <div class="row">
-                            <div class="order-lg-2 col-lg-7">
-                                <div class="p-5 mt-lg-5 aboutdiv">
-                                    <div class="css-aq3aix" style="animation-delay: 0ms">
-                                        <span class="portfoliohead">ABOUT ME</span>
-                                    </div>
-                                    <div class="css-aq3aix" style="animation-delay: 0ms">
-                                        <p class="aboutpara">
-                                            Experienced developer adept in Flutter and MERN stack
-                                            technologies (Flutter, Dart, Firebase, MongoDB,
-                                            Express.js, React.js, Node.js). Skilled in frontend and
-                                            backend development, with a focus on user-friendly
-                                            design. Eager to collaborate and learn within a
-                                            development team.
-                                        </p>
-                                    </div>
-                                    <div class="css-zvi4ix" style="animation-delay: 0ms">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <span class="aboutcategoryhead custom-underline">Skills</span>
-                                            </div>
-                                            <div class="col-4">
-                                                <span class="aboutcategoryhead false">Experience</span>
-                                            </div>
-                                            <div class="col-4">
-                                                <span class="aboutcategoryhead false">Education</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mt-4 row">
-                                        <div class="css-zvi4ix" style="animation-delay: 0ms">
-                                            <div class>
-                                                <div class="row">
-                                                    <div>
-                                                        <div class="row">
-                                                            <span class="aboutrole">Web Development</span>
-                                                        </div>
-                                                        <div class="row">
-                                                            <span class="aboutcontent">Web App Development</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="mt-2">
-                                                        <div class="row">
-                                                            <span class="aboutrole">App Development</span>
-                                                        </div>
-                                                        <div class="row">
-                                                            <span class="aboutcontent">Mobile App Development</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-none d-lg-block col-lg-5">
-                                <div class="container">
-                                    <div class="css-1c2fuzs" style="animation-delay: 0ms">
-                                        <div class="mt-lg-5 d-flex justify-content-center align-items-center">
-                                            <img src="./assets/abut.jpg" alt="Aboutpic" class="aboutimg my-5" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="Techstack">
-                    <div class="text-lg-center text-center mt-5 techcontainer container">
-                        <div class="my-4 mx-lg-5 mx-2">
-                            <div class="css-zvi4ix" style="animation-delay: 0ms">
-                                <span class="portfoliohead">TECH STACK</span>
-                            </div>
-                            <div class="css-zvi4ix" style="animation-delay: 0ms">
-                                <p class="techstackpara mt-lg-1">
-                                    These are the few Technologies, languages and frameworks
-                                    that i grind on a regular basis...
-                                </p>
-                            </div>
-                        </div>
-                        <div class="mx-auto p-lg-3 mx-lg-3 py-1 row">
-                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                <div class="css-zvi4ix" style="animation-delay: 0ms">
-                                    <div class="stackcontent mt-3">
-                                        <picture><img
-                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                                                alt="React" width="100" height="100" class="w-auto p-4" /></picture>
-                                        <div class="text-center mb-2 text-sm md:text-md">
-                                            Html
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                <div class="css-pmnvho" style="animation-delay: 0ms">
-                                    <div class="stackcontent mt-3">
-                                        <picture><img
-                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                                                alt="React" width="100" height="100" class="w-auto p-4" /></picture>
-                                        <div class="text-center mb-2 text-sm md:text-md">
-                                            CSS 3
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                <div class="css-4qt5ax" style="animation-delay: 0ms">
-                                    <div class="stackcontent mt-3">
-                                        <picture><img
-                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                                                alt="React" width="100" height="100" class="w-auto p-4" /></picture>
-                                        <div class="text-center mb-2 text-sm md:text-md">JS</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                <div class="css-8t6fka" style="animation-delay: 0ms">
-                                    <div class="stackcontent mt-3">
-                                        <picture><img
-                                                src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg"
-                                                alt="React" width="100" height="100" class="w-auto p-4" /></picture>
-                                        <div class="text-center mb-2 text-sm md:text-md">
-                                            Flutter
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                <div class="css-1rpbsdd" style="animation-delay: 0ms">
-                                    <div class="stackcontent mt-3">
-                                        <picture><img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg"
-                                                alt="React" width="100" height="100" class="w-auto p-4" /></picture>
-                                        <div class="text-center mb-2 text-sm md:text-md">
-                                            Dart
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                <div class="css-1qmphhv" style="animation-delay: 0ms">
-                                    <div class="stackcontent mt-3">
-                                        <picture><img
-                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-                                                alt="React" width="100" height="100" class="w-auto p-4" /></picture>
-                                        <div class="text-center mb-2 text-sm md:text-md">
-                                            MongoDb
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                <div class="css-zvi4ix" style="animation-delay: 0ms">
-                                    <div class="stackcontent mt-3">
-                                        <picture><img src="https://skillicons.dev/icons?i=express" alt="React"
-                                                width="100" height="100" class="w-auto p-4" /></picture>
-                                        <div class="text-center mb-2 text-sm md:text-md">
-                                            Express.js
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                <div class="css-pmnvho" style="animation-delay: 0ms">
-                                    <div class="stackcontent mt-3">
-                                        <picture><img
-                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                                                alt="React" width="100" height="100" class="w-auto p-4" /></picture>
-                                        <div class="text-center mb-2 text-sm md:text-md">
-                                            React.js
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                <div class="css-4qt5ax" style="animation-delay: 0ms">
-                                    <div class="stackcontent mt-3">
-                                        <picture><img
-                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-                                                alt="React" width="100" height="100" class="w-auto p-4" /></picture>
-                                        <div class="text-center mb-2 text-sm md:text-md">
-                                            Node.js
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                <div class="css-8t6fka" style="animation-delay: 0ms">
-                                    <div class="stackcontent mt-3">
-                                        <picture><img src="https://cdn.simpleicons.org/redux/764ABC" alt="React"
-                                                width="100" height="100" class="w-auto p-4" /></picture>
-                                        <div class="text-center mb-2 text-sm md:text-md">
-                                            Redux
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                <div class="css-1rpbsdd" style="animation-delay: 0ms">
-                                    <div class="stackcontent mt-3">
-                                        <picture><img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg"
-                                                alt="React" width="100" height="100" class="w-auto p-4" /></picture>
-                                        <div class="text-center mb-2 text-sm md:text-md">
-                                            Firebase
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                <div class="css-1qmphhv" style="animation-delay: 0ms">
-                                    <div class="stackcontent mt-3">
-                                        <picture><img
-                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                                                alt="React" width="100" height="100" class="w-auto p-4" /></picture>
-                                        <div class="text-center mb-2 text-sm md:text-md">Git</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                <div class="css-zvi4ix" style="animation-delay: 0ms">
-                                    <div class="stackcontent mt-3">
-                                        <picture><img src="https://skillicons.dev/icons?i=github" alt="React"
-                                                width="100" height="100" class="w-auto p-4" /></picture>
-                                        <div class="text-center mb-2 text-sm md:text-md">
-                                            GitHub
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                <div class="css-pmnvho" style="animation-delay: 0ms">
-                                    <div class="stackcontent mt-3">
-                                        <picture><img
-                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-                                                alt="React" width="100" height="100" class="w-auto p-4" /></picture>
-                                        <div class="text-center mb-2 text-sm md:text-md">
-                                            Bootstrap
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                <div class="css-4qt5ax" style="animation-delay: 0ms">
-                                    <div class="stackcontent mt-3">
-                                        <picture><img src="https://react-bootstrap.netlify.app/img/logo.svg" alt="React"
-                                                width="100" height="100" class="w-auto p-4" /></picture>
-                                        <div class="text-center mb-2 text-sm md:text-md">
-                                            React Bootstrap
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                <div class="css-8t6fka" style="animation-delay: 0ms">
-                                    <div class="stackcontent mt-3">
-                                        <picture><img src="https://jwt.io/img/pic_logo.svg" alt="React" width="100"
-                                                height="100" class="w-auto p-4" /></picture>
-                                        <div class="text-center mb-2 text-sm md:text-md">JWT</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                <div class="css-1rpbsdd" style="animation-delay: 0ms">
-                                    <div class="stackcontent mt-3">
-                                        <picture><img src="https://cdn.simpleicons.org/php/777BB4" alt="React"
-                                                width="100" height="100" class="w-auto p-3" /></picture>
-                                        <div class="text-center mb-2 text-sm md:text-md">Php</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                <div class="css-1qmphhv" style="animation-delay: 0ms">
-                                    <div class="stackcontent mt-3">
-                                        <picture><img
-                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-                                                alt="React" width="100" height="100" class="w-auto p-4" /></picture>
-                                        <div class="text-center mb-2 text-sm md:text-md">
-                                            MySql
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                <div class="css-zvi4ix" style="animation-delay: 0ms">
-                                    <div class="stackcontent mt-3">
-                                        <picture><img
-                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg"
-                                                alt="React" width="100" height="100" class="w-auto p-4" /></picture>
-                                        <div class="text-center mb-2 text-sm md:text-md">
-                                            CodeIgniter
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                <div class="css-pmnvho" style="animation-delay: 0ms">
-                                    <div class="stackcontent mt-3">
-                                        <picture><img
-                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg"
-                                                alt="React" width="100" height="100" class="w-auto p-4" /></picture>
-                                        <div class="text-center mb-2 text-sm md:text-md">NPM</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                                <div class="css-4qt5ax" style="animation-delay: 0ms">
-                                    <div class="stackcontent mt-3">
-                                        <picture><img src="https://cdn.simpleicons.org/postman/FF6C37" alt="React"
-                                                width="100" height="100" class="w-auto p-4" /></picture>
-                                        <div class="text-center mb-2 text-sm md:text-md">
-                                            Postman
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="rounded-5 col-lg-2 col-md-3 col-sm-4 col-6">
-                                <div class="css-8t6fka" style="animation-delay: 0ms">
-                                    <div class="stackcontent mt-3">
-                                        <picture><img src="./assets/api.png" alt="React" width="100" height="100"
-                                                class="w-auto p-4 rounded-5" /></picture>
-                                        <div class="text-center mb-2 text-sm md:text-md">API</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="rounded-5 col-lg-2 col-md-3 col-sm-4 col-6">
-                                <div class="css-1rpbsdd" style="animation-delay: 0ms">
-                                    <div class="stackcontent mt-3">
-                                        <picture><img src="./assets/Tailwind.webp" alt="React" width="100" height="100"
-                                                class="w-5 p-4 rounded-5" /></picture>
-                                        <div class="text-center mb-2 text-sm md:text-md">
-                                            Tailwind
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="rounded-5 col-lg-2 col-md-3 col-sm-4 col-6">
-                                <div class="css-1qmphhv" style="animation-delay: 0ms">
-                                    <div class="stackcontent mt-3">
-                                        <picture><img
-                                                src="https://w7.pngwing.com/pngs/761/513/png-transparent-material-ui-logo.png"
-                                                alt="React" width="100" height="100" class="w-auto p-4 rounded-5" />
-                                        </picture>
-                                        <div class="text-center mb-2 text-sm md:text-md">
-                                            Material UI
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="Projects">
-                    <div class="text-lg-center text-center mt-5 techcontainer container">
-                        <div class="my-4 mx-lg-5 mx-2">
-                            <div class="css-zvi4ix" style="animation-delay: 0ms">
-                                <span class="portfoliohead">PROJECTS</span>
-                            </div>
-                            <div class="css-zvi4ix" style="animation-delay: 0ms">
-                                <p class="techstackpara mt-lg-1">
-                                    I have worked on a wide range of projects. From web apps to
-                                    mobile apps. Here are some of my projects.
-                                </p>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="css-zvi4ix" style>
-                                <div role="group" class="btn-group">
-                                    <button type="button" class="rounded-start-5 active btn btn-outline-light">
-                                        ALL</button><button type="button" class="btn btn-outline-light">
-                                        WEB APP'S</button><button type="button"
-                                        class="rounded-end-5 btn btn-outline-light">
-                                        ANDROID APP'S
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="p-lg-5 p-4 container">
-                                <div class="css-aq3aix" style="animation-delay: 0ms">
-                                    <div class="row">
-                                        <div class="mt-3 col-lg-4 col-md-6 col-sm-12">
-                                            <div class="Cardproject p-4">
-                                                <img class="projectimg img-fluid" src="../assets/newsapi.jpg"
-                                                    alt="Project" />
-                                                <div class="projecttags mt-3">
-                                                    <span class="projecttag">Flutter</span><span
-                                                        class="projecttag">Dart</span><span
-                                                        class="projecttag">API</span>
-                                                </div>
-                                                <div class="ProjectDetails mt-lg-2">
-                                                    <div class="Projecttitle">News API App</div>
-                                                    <div class="Projectrole">Flutter Project</div>
-                                                    <div class="Projectmainrole"></div>
-                                                    <div class="Projectdate"></div>
-                                                    <div class="Projectdescription mt-2">
-                                                        I developed a user-friendly Flutter News API
-                                                        application that efficiently connects to news data
-                                                        through robust API integrations. This project
-                                                        highlights my expertise in mobile app development,
-                                                        seamless API integration, and intuitive UI design.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mt-3 col-lg-4 col-md-6 col-sm-12">
-                                            <div class="Cardproject p-4">
-                                                <img class="projectimg img-fluid" src="../assets/amazon.png"
-                                                    alt="Project" />
-                                                <div class="projecttags mt-3">
-                                                    <span class="projecttag">Flutter</span><span
-                                                        class="projecttag">Dart</span><span
-                                                        class="projecttag">API</span>
-                                                </div>
-                                                <div class="ProjectDetails mt-lg-2">
-                                                    <div class="Projecttitle">Shopping App</div>
-                                                    <div class="Projectrole">Flutter Project</div>
-                                                    <div class="Projectmainrole"></div>
-                                                    <div class="Projectdate"></div>
-                                                    <div class="Projectdescription mt-2">
-                                                        I have created a user-friendly Flutter shopping
-                                                        app that seamlessly connects to product data
-                                                        through APIs. This project demonstrates my strong
-                                                        skills in app development, API integration, and UI
-                                                        design.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mt-3 col-lg-4 col-md-6 col-sm-12">
-                                            <div class="Cardproject p-4">
-                                                <img class="projectimg img-fluid" src="../assets/bloodapp.png"
-                                                    alt="Project" />
-                                                <div class="projecttags mt-3">
-                                                    <span class="projecttag">Flutter</span><span
-                                                        class="projecttag">Dart</span><span
-                                                        class="projecttag">Firebase</span>
-                                                </div>
-                                                <div class="ProjectDetails mt-lg-2">
-                                                    <div class="Projecttitle">Blood Donation App</div>
-                                                    <div class="Projectrole">Flutter (Crud App)</div>
-                                                    <div class="Projectmainrole"></div>
-                                                    <div class="Projectdate"></div>
-                                                    <div class="Projectdescription mt-2">
-                                                        Created a Flutter-based blood donation app
-                                                        featuring comprehensive CRUD operations. Users can
-                                                        effortlessly Create, Read, Update, and Delete
-                                                        donor profiles,. The app streamlines blood
-                                                        donation management, enhancing accessibility and
-                                                        efficiency in the process.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mt-3 col-lg-4 col-md-6 col-sm-12">
-                                            <div class="Cardproject p-4">
-                                                <img class="projectimg img-fluid" src="../assets/cyclethumb.png"
-                                                    alt="Project" />
-                                                <div class="projecttags mt-3">
-                                                    <span class="projecttag">React</span><span
-                                                        class="projecttag">CSS</span><span
-                                                        class="projecttag">Javascript</span><span
-                                                        class="projecttag">Express.js</span><span
-                                                        class="projecttag">Node.js</span><span
-                                                        class="projecttag">Redux</span><span
-                                                        class="projecttag">MongoDb</span>
-                                                </div>
-                                                <div class="ProjectDetails mt-lg-2">
-                                                    <div class="Projecttitle">Bicycle_Website</div>
-                                                    <div class="Projectrole"></div>
-                                                    <div class="Projectmainrole">Mern Project</div>
-                                                    <div class="Projectdate">Ecommerce Platform</div>
-                                                    <div class="Projectdescription mt-2">
-                                                        Developed a bicycle eCommerce platform using the
-                                                        MERN stack, implementing Redux for efficient state
-                                                        management. Utilized JWT tokens for secure user
-                                                        authentication and enhanced security, delivering a
-                                                        seamless and user-friendly shopping experience for
-                                                        cycling enthusiasts.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mt-3 col-lg-4 col-md-6 col-sm-12">
-                                            <div class="Cardproject p-4">
-                                                <img class="projectimg img-fluid" src="../assets/socialmediathumb.png"
-                                                    alt="Project" />
-                                                <div class="projecttags mt-3">
-                                                    <span class="projecttag">React</span><span
-                                                        class="projecttag">CSS</span><span
-                                                        class="projecttag">Javascript</span><span
-                                                        class="projecttag">MongoDb</span><span
-                                                        class="projecttag">Express.js</span><span
-                                                        class="projecttag">Node.js</span>
-                                                </div>
-                                                <div class="ProjectDetails mt-lg-2">
-                                                    <div class="Projecttitle">SocialZone</div>
-                                                    <div class="Projectrole"></div>
-                                                    <div class="Projectmainrole">Mern Project</div>
-                                                    <div class="Projectdate">Socialmedia Platform</div>
-                                                    <div class="Projectdescription mt-2">
-                                                        A React-based social media platform, equipped with
-                                                        a simple CRUD application using MERN Stack,
-                                                        empowers users to efficiently manage their online
-                                                        presence. It offers a range of essential tools for
-                                                        social media management.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mt-3 col-lg-4 col-md-6 col-sm-12">
-                                            <div class="Cardproject p-4">
-                                                <img class="projectimg img-fluid" src="../assets/webhost_react.png"
-                                                    alt="Project" />
-                                                <div class="projecttags mt-3">
-                                                    <span class="projecttag">React</span><span
-                                                        class="projecttag">React-Bootstrap</span><span
-                                                        class="projecttag">CSS</span>
-                                                </div>
-                                                <div class="ProjectDetails mt-lg-2">
-                                                    <div class="Projecttitle">Webhost</div>
-                                                    <div class="Projectrole">Front-end Development</div>
-                                                    <div class="Projectmainrole"></div>
-                                                    <div class="Projectdate">Sep 2023 - Oct 2023</div>
-                                                    <div class="Projectdescription mt-2">
-                                                        Webhost is a React-based UI project designed to
-                                                        showcase frontend skills. With its modern design
-                                                        and user-friendly approach, Webhost offers a
-                                                        seamless and engaging experience for users
-                                                        exploring webhosting platform.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mt-3 col-lg-4 col-md-6 col-sm-12">
-                                            <div class="Cardproject p-4">
-                                                <img class="projectimg img-fluid" src="../assets/streamo.png"
-                                                    alt="Project" />
-                                                <div class="projecttags mt-3">
-                                                    <span class="projecttag">Html</span><span
-                                                        class="projecttag">CSS</span><span
-                                                        class="projecttag">Javascript</span>
-                                                </div>
-                                                <div class="ProjectDetails mt-lg-2">
-                                                    <div class="Projecttitle">Streamo</div>
-                                                    <div class="Projectrole">Front-end Development</div>
-                                                    <div class="Projectmainrole"></div>
-                                                    <div class="Projectdate">Aug 2023 - Sep 2023</div>
-                                                    <div class="Projectdescription mt-2">
-                                                        Streamo is an HTML, CSS, and JavaScript-based
-                                                        Clone UI project designed to showcase frontend
-                                                        skills. With its modern design and user-friendly
-                                                        approach, Streamo offers a seamless and engaging
-                                                        experience for users exploring the platform.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mt-3 col-lg-4 col-md-6 col-sm-12">
-                                            <div class="Cardproject p-4">
-                                                <img class="projectimg img-fluid" src="../assets/thumb onlineshop.png"
-                                                    alt="Project" />
-                                                <div class="projecttags mt-3">
-                                                    <span class="projecttag">Html</span><span
-                                                        class="projecttag">CSS</span><span
-                                                        class="projecttag">Javascript</span><span
-                                                        class="projecttag">Fake Store API</span>
-                                                </div>
-                                                <div class="ProjectDetails mt-lg-2">
-                                                    <div class="Projecttitle">Shopping Website</div>
-                                                    <div class="Projectrole">Front-end Development</div>
-                                                    <div class="Projectmainrole"></div>
-                                                    <div class="Projectdate"></div>
-                                                    <div class="Projectdescription mt-2">
-                                                        I have created a user-friendly React-based
-                                                        shopping website that seamlessly connects to
-                                                        product data through APIs. This project
-                                                        demonstrates my strong skills in Web development,
-                                                        API integration, and UI design.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mt-3 col-lg-4 col-md-6 col-sm-12">
-                                            <div class="Cardproject p-4">
-                                                <img class="projectimg img-fluid" src="../assets/aeroship.png"
-                                                    alt="Project" />
-                                                <div class="projecttags mt-3">
-                                                    <span class="projecttag">React</span><span
-                                                        class="projecttag">Tailwind</span>
-                                                </div>
-                                                <div class="ProjectDetails mt-lg-2">
-                                                    <div class="Projecttitle">Aero_Clone_Website</div>
-                                                    <div class="Projectrole">Front-end Development</div>
-                                                    <div class="Projectmainrole"></div>
-                                                    <div class="Projectdate"></div>
-                                                    <div class="Projectdescription mt-2">
-                                                        AeroShip is a React-based UI project designed to
-                                                        showcase frontend skills. With its modern design,
-                                                        user-friendly approach, and complete responsive
-                                                        website, AeroShip offers a seamless and engaging
-                                                        experience for users exploring the platform.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="css-zvi4ix" style="animation-delay: 0ms"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="Contact">
-                    <div class="text-lg-center text-center p-lg-5 p-4 contactcontainer container">
-                        <div class="my-4 mx-lg-5 mx-2">
-                            <div class="css-zvi4ix" style="animation-delay: 0ms">
-                                <span class="portfoliohead">CONTACT</span>
-                            </div>
-                            <div class="css-zvi4ix" style="animation-delay: 0ms">
-                                <p class="techstackpara mt-lg-1">
-                                    Feel free to reach out to me for any questions or
-                                    opportunities!
-                                </p>
-                            </div>
-                        </div>
-                        <div class="text-lg-start text-center mt-5 p-lg-2 row">
-                            <div class="mx-lg-5 col-lg">
-                                <div class="css-aq3aix" style="animation-delay: 0ms">
-                                    <div class="row">
-                                        <div class="py-3 px-3 contact__icon-box col-lg-3">
-                                            <i class="fa-solid fa-location-dot fa-lg iconcontact"></i>
-                                        </div>
-                                        <div class="col-lg-9">
-                                            <span class="concthead">Location</span>
-                                            <p class="contactcontent">Kerala, India</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mx-lg-5 col-lg">
-                                <div class="css-1qmphhv" style="animation-delay: 0ms">
-                                    <div class="bg-info1 row">
-                                        <div class="py-3 px-3 contactiocn col-lg-3">
-                                            <i class="fa-solid fa-phone fa-lg iconcontact"></i>
-                                        </div>
-                                        <div class="col-lg-9">
-                                            <span class="concthead">Phone</span>
-                                            <p class="contactcontent">+91 8086370435</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mx-lg-5 col-lg">
-                                <div class="css-1omu4hy" style="animation-delay: 0ms">
-                                    <div class="bg-info1 row">
-                                        <div class="py-3 px-3 contactiocn col-lg-3">
-                                            <i class="fa-solid fa-envelope fa-lg iconcontact"></i>
-                                        </div>
-                                        <div class="col-lg-9">
-                                            <span class="concthead">Email</span><a href="mailto:midhunraj0022@gmail.com"
-                                                target="_blank" class="text-decoration-none">
-                                                <p class="contactcontent">
-                                                    midhunraj0022@gmail.com
-                                                </p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer container-fluid">
-                    <div class="row">
-                        <div class="footer-copywright col-md-4">
-                            <div class="css-1qmphhv" style="animation-delay: 0ms">
-                                <h3 class>Designed and Developed by Midhun Raj</h3>
-                            </div>
-                        </div>
-                        <div class="footer-copywright col-md-4">
-                            <div class="css-1qmphhv" style="animation-delay: 0ms">
-                                <h3 class>Copyright © 2024 Midhun.dev</h3>
-                            </div>
-                        </div>
-                        <div class="footer-body col-md-4">
-                            <div class="css-1qmphhv" style="animation-delay: 0ms">
-                                <div class="footer-icons">
-                                    <a href="https://github.com/MidhunrajGit0022" target="_blank" class="ms-3"
-                                        style="color: white"><svg stroke="currentColor" fill="currentColor"
-                                            stroke-width="0" viewBox="0 0 1024 1024" class="footericoncolor"
-                                            height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z">
-                                            </path>
-                                        </svg></a><a href="https://twitter.com/Midhun_raj0077" target="_blank"
-                                        class="ms-3" style="color: white"><svg stroke="currentColor" fill="currentColor"
-                                            stroke-width="0" viewBox="0 0 512 512" class="footericoncolor" height="1em"
-                                            width="1em" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
-                                            </path>
-                                        </svg></a><a href="https://www.linkedin.com/in/midhunraj0022/" target="_blank"
-                                        class="ms-3" style="color: white"><svg stroke="currentColor" fill="currentColor"
-                                            stroke-width="0" viewBox="0 0 448 512" class="footericoncolor" height="1em"
-                                            width="1em" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
-                                            </path>
-                                        </svg></a><a href="https://www.instagram.com/_mi_._dhun_/" target="_blank"
-                                        class="ms-3" style="color: white"><svg stroke="currentColor" fill="currentColor"
-                                            stroke-width="0" viewBox="0 0 1024 1024" class="footericoncolor"
-                                            height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M512 378.7c-73.4 0-133.3 59.9-133.3 133.3S438.6 645.3 512 645.3 645.3 585.4 645.3 512 585.4 378.7 512 378.7zM911.8 512c0-55.2.5-109.9-2.6-165-3.1-64-17.7-120.8-64.5-167.6-46.9-46.9-103.6-61.4-167.6-64.5-55.2-3.1-109.9-2.6-165-2.6-55.2 0-109.9-.5-165 2.6-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6 46.9 46.9 103.6 61.4 167.6 64.5 55.2 3.1 109.9 2.6 165 2.6 55.2 0 109.9.5 165-2.6 64-3.1 120.8-17.7 167.6-64.5 46.9-46.9 61.4-103.6 64.5-167.6 3.2-55.1 2.6-109.8 2.6-165zM512 717.1c-113.5 0-205.1-91.6-205.1-205.1S398.5 306.9 512 306.9 717.1 398.5 717.1 512 625.5 717.1 512 717.1zm213.5-370.7c-26.5 0-47.9-21.4-47.9-47.9s21.4-47.9 47.9-47.9 47.9 21.4 47.9 47.9a47.84 47.84 0 0 1-47.9 47.9z">
-                                            </path>
-                                        </svg></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <a href="https://github.com/wizardfebin" target="_blank" class="social-link"><i class="fab fa-github"></i> GitHub</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://www.linkedin.com/in/febin-mathew-b53283199/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="FebinMathewCV.pdf" target="_blank" class="download-button">Download CV</a>
             </div>
         </div>
-    </div>
-</body>
+    </header>
+    <nav>               
 
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <button id="theme-toggle" style="margin-left: 1%;">🌙</button>
+
+
+        </ul>
+        
+    </nav>
+    <main>
+        
+        <section id="home" class="section">
+            <div class="home-content">
+                <div class="image-container">
+                    <img src="mypic.jpg" class="main-image" alt="Your Name">
+                </div>
+                <div class="text-container">
+                    <h2 class="section-name">Febin Mathew</h2>
+                    <p>I am a passionate developer who loves creating beautiful and functional web applications.</p>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>I have a background in web development and design, and I enjoy learning new technologies.</p>
+            <p><strong>Objective:</strong> Able to effectively self-manage during independent projects, as well as collaborate as part of a productive team.</p>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <h2>Experience</h2>
+            <p><strong>Software Developer at <a href="https://www.softzanesolutions.in/" class="special-link"> Softzane Solutions</a></strong></p>
+            <p>January 2024 - Present</p>
+            <p>I work as a Django Developer with experience in Python. My responsibilities include building and maintaining web applications, ensuring their functionality and optimization, and collaborating on project development.</p>
+
+            <p><strong>Internship:</strong> Data Science with Python at  <a href="https://www.linkedin.com/company/techlang-in/posts/?feedView=all" class="special-link">Techlang</a></p>
+            <p>May 2023 – August 2023</p>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>My Projects</h2>
+            <div class="projects-container">
+                <div class="project">
+                    <h3>E-Devaswom</h3>
+                    <p>Managing all the temples (As part of Degree minor project).</p>
+                </div>
+                <div class="project">
+                    <h3>Movie Success Prediction</h3>
+                    <p>Predicts the success of movies (As part of Degree major project).</p>
+                </div>
+                <div class="project">
+                    <h3>Drowsiness Detection</h3>
+                    <p>Detects drowsiness in drivers in real-time using Python-Django and OpenCV (As part of PG project).</p>
+                </div>
+                <div class="project" id="github">
+                    
+                    <a href="https://github.com/wizardfebin" target="_blank" style="text-decoration: none; color: inherit;">
+                        <h3>Visit Here!</h3>
+                        <p>Visit my Github profile for more project details</p>
+                    </a>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Skills Section with Icons -->
+        
+<section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skill-container">
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-icon">
+            <p>Python</p>
+        </div>
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" class="skill-icon">
+            <p>Django</p>
+        </div>
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" class="skill-icon">
+            <p>Express.js</p>
+        </div>
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="skill-icon">
+            <p>MongoDB</p>
+        </div>
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-icon">
+            <p>HTML5</p>
+        </div>
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="skill-icon">
+            <p>CSS3</p>
+        </div>
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-icon">
+            <p>JavaScript</p>
+        </div>
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="skill-icon">
+            <p>MySQL</p>
+        </div>
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="skill-icon">
+            <p>Node.js</p>
+        </div>
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" class="skill-icon">
+            <p>NumPy</p>
+        </div>
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" class="skill-icon">
+            <p>Pandas</p>
+        </div>
+       
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="skill-icon">
+            <p>GitHub</p>
+        </div>
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg" alt="Keras" class="skill-icon">
+            <p>Keras</p>
+        </div>
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" class="skill-icon">
+            <p>PyTorch</p>
+        </div>
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" class="skill-icon">
+            <p>TensorFlow</p>
+        </div>
+       
+    </div>
+    </section>
+        
+        <section id="contact" class="section">
+            <h2>Contact Me</h2>
+            <p>You can reach me at <a href="mailto:fbnmthw2000@gmail.com" class="special-link">fbnmthw2000@gmail.com</a>.</p>
+            <p>Contact: 8606536474</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Portfolio</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
 </html>
