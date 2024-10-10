@@ -163,6 +163,7 @@ body {
     border-image-slice: 1; /* Ensures the gradient covers the entire border */
     
     animation: gradient-border 2s linear infinite; /* Animate the border gradient */
+
 }
 
 .section:hover {
@@ -510,6 +511,48 @@ a:focus, button:focus {
     align-items: center; /* Vertically center the items */
     gap: 20px; /* Space between image and text */
 }
+.home-content {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically center the items */
+    gap: 20px; /* Space between image and text */
+    max-width: 1200px; /* Set a maximum width */
+    margin: 0 auto; /* Center the content */
+    padding: 20px; /* Add some padding */
+}
+
+.image-container {
+    flex: 1; /* Allow the image container to grow */
+}
+
+.text-container {
+    flex: 2; /* Allow the text container to grow more */
+}
+
+.main-image {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add border radius */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+        gap: 15px; /* Adjust gap */
+    }
+}
+
+@media (max-width: 480px) {
+    .section-name {
+        font-size: 32px; /* Adjust font size for small screens */
+    }
+
+    .home-content {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+}
+
 
 .image-container {
     flex: 0 0 auto; /* Prevent the image from growing */
@@ -606,3 +649,24 @@ a:focus, button:focus {
     }
 }
 
+@media (max-width: 768px) {
+    .section-content {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+        gap: 15px; /* Adjust gap */
+    }
+
+    .section-name {
+        font-size: 32px; /* Adjust font size for small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .section-name {
+        font-size: 28px; /* Further reduce font size */
+    }
+
+    .section {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+}
