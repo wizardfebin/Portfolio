@@ -73,28 +73,6 @@ nav {
     z-index: 1000; /* Ensure it stays above other content */
     transition: background-color 0.3s; /* Smooth transition for background color */
 }
-nav a {
-    text-decoration: none; /* Removes underline from links */
-    font-size: 18px; /* Adjusts font size */
-    margin: 0 15px; /* Adds space between links */
-    background: linear-gradient(90deg, #4409e9, #ee0979, #e608ff); /* Gradient colors */
-    background-size: 300%; /* Extends background size for animation */
-    -webkit-background-clip: text; /* Clips background to the text */
-    -webkit-text-fill-color: transparent; /* Makes text color transparent */
-    animation: gradient-animation 3s ease-in-out infinite; /* Animation for the gradient */
-}
-
-@keyframes gradient-animation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
 
 /* Navbar List Styles */
 nav ul {
@@ -113,15 +91,64 @@ nav ul li {
 /* Navbar Link Styles */
 nav ul li a {
     text-decoration: none; /* No underline */
+    font-size: 18px; /* Adjusts font size */
     color: var(--link-color); /* Text color from variable */
     font-weight: bold; /* Bold text */
     transition: color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
+    background: linear-gradient(90deg, #4409e9, #ee0979, #e608ff); /* Gradient colors */
+    background-size: 300%; /* Extends background size for animation */
+    -webkit-background-clip: text; /* Clips background to the text */
+    -webkit-text-fill-color: transparent; /* Makes text color transparent */
+    animation: gradient-animation 3s ease-in-out infinite; /* Animation for the gradient */
 }
 
 /* Link Hover Effects */
 nav ul li a:hover {
     color: var(--link-hover-color); /* Hover color from variable */
     transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Keyframes for Gradient Animation */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack items vertically */
+        padding: 10px; /* Add padding */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center; /* Center items */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Vertical margin for spacing */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Smaller font size on mobile */
+    }
+    header {
+        padding: 10px; /* Reduce header padding */
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 14px; /* Further reduce font size for very small screens */
+    }
 }
 
 /* Body Margin to Prevent Content from Hiding Behind the Navbar */
