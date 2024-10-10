@@ -65,12 +65,8 @@ window.onscroll = function() {
     }
 };
 
-document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
+function toggleNav() {
     const navList = document.querySelector('.nav-list');
-
-    hamburger.addEventListener('click', function() {
-        navList.classList.toggle('active'); // Toggle active class to show/hide menu
-    });
-});
+    navList.classList.toggle('active'); // Toggle the active class to show/hide
+}
 

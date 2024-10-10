@@ -21,7 +21,51 @@ header {
     text-align: center;
     position: relative;
     /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
-   }
+    margin-top: 70px; /* Adjust this based on the height of your navbar */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        padding: 15px; /* Reduce padding on smaller screens */
+        font-size: 18px; /* Adjust font size if necessary */
+    }
+
+    header h1 {
+        font-size: 24px; /* Adjust heading size */
+    }
+
+    header h2 {
+        font-size: 20px; /* Adjust subheading size */
+    }
+}
+@media (max-width: 480px) {
+    header {
+        padding: 10px; /* Further reduce padding for very small screens */
+    }
+
+    .name {
+        font-size: 1.5em; /* Smaller font size for the name */
+    }
+
+    .social-links {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center items */
+        margin-top: 5px; /* Space above the social links */
+    }
+
+    .social-link, .download-button {
+        margin: 5px 0; /* Add spacing between links */
+        font-size: 14px; /* Smaller font size for social links */
+        text-decoration: none; /* No underline */
+        color: var(--link-color); /* Use your link color variable */
+        transition: color 0.3s; /* Smooth transition for hover effects */
+    }
+
+    .social-link:hover, .download-button:hover {
+        color: var(--link-hover-color); /* Change color on hover */
+    }
+}
 
 .container {
     display: flex;
@@ -73,6 +117,12 @@ body[data-theme='dark'] button {
         z-index: 1000; /* Ensure it stays above other content */
         transition: background-color 0.3s; /* Smooth transition for background color */
     }
+    @media (max-width: 768px) {
+        header {
+            margin-top: 60px; /* Reduce margin for mobile screens */
+            padding: 15px;
+        }
+    }
 nav a {
     text-decoration: none; /* Removes underline from links */
     font-size: 18px; /* Adjusts font size */
@@ -123,15 +173,77 @@ nav ul li a:hover {
     color: var(--link-hover-color); /* Hover color from variable */
     transform: scale(1.05); /* Scale effect on hover */
 }
-nav .hamburger {
-    display: none; /* Hide hamburger button by default */
-    font-size: 24px; /* Adjust size of the hamburger icon */
-    background: none; /* No background */
-    border: none; /* No border */
-    cursor: pointer; /* Pointer on hover */
-    color: var(--link-color); /* Color of hamburger icon */
+/* Navbar Styles */
+nav {
+    background: var(--nav-bg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar stays above other content */
+    transition: background-color 0.3s;
 }
 
+.nav-list {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items */
+    padding: 10px 0;
+    list-style: none; /* Remove bullet points */
+    margin: 0; /* No margin */
+}
+
+/* Hamburger Button */
+.hamburger {
+    display: none; /* Hide hamburger by default */
+    font-size: 24px; /* Size of the hamburger icon */
+    background: none; /* No background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    color: #fff; /* Change to your desired color */
+}
+
+/* Header Styles */
+header {
+    background: var(--header-bg);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    margin-top: 70px; /* Adjust based on navbar height */
+    z-index: 999; /* Ensure it stays below the navbar */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none; /* Hide the nav list initially */
+        flex-direction: column; /* Stack items vertically */
+        background: var(--nav-bg); /* Background color */
+        position: absolute; /* Position absolutely */
+        top: 60px; /* Adjust this based on navbar height */
+        width: 100%; /* Full width */
+        left: 0; /* Align to the left */
+        z-index: 999; /* Above other content */
+    }
+
+    .nav-list.active {
+        display: flex; /* Show when active */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+    }
+
+    header {
+        margin-top: 80px; /* Adjust based on navbar height */
+    }
+}
+}.nav-list {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items */
+    padding: 10px 0;
+    list-style: none; /* Remove bullet points */
+    margin: 0; /* No margin */
+}
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     nav .nav-list {
