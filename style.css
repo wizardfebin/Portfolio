@@ -815,11 +815,11 @@ a:focus, button:focus {
 
 
 /* Base styles for the contact section */
-#contact {
-    padding: 40px 20px; /* Space around the content */
-    text-align: center; /* Center the text */
-    font-size: 16px; /* Default font size */
-    color: var(--text-color); /* Use a text color variable */
+#contact p {
+    word-spacing: normal; /* Normal word spacing */
+    letter-spacing: normal; /* Normal letter spacing */
+    font-size: 16px; /* Ensure normal font size */
+    line-height: 1.5; /* Adjust line height for readability */
 }
 
 /* Heading styles */
@@ -847,9 +847,11 @@ a:focus, button:focus {
     }
 
     #contact p {
-        font-size: 15px; /* Smaller font for paragraphs */
+        word-spacing: normal; /* Normal word spacing */
+        letter-spacing: normal; /* Normal letter spacing */
+        font-size: 15px; /* Ensure normal font size */
     }
-}
+    }
 
 /* For mobile phones (480px and below) */
 @media (max-width: 480px) {
