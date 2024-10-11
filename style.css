@@ -9,6 +9,10 @@ body {
     overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
+.container, .home-content, .nav-list, header, .image-container {
+    max-width: 100%;
+    overflow-x: hidden; /* Ensure no horizontal overflow */
+}
 /* Body Styling */
 body {
     font-family: 'Roboto', sans-serif; /* Use a modern font */
