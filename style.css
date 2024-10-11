@@ -815,22 +815,7 @@ p {
     font-size: 16px; /* Default font size */
     line-height: 1.6; /* Improve readability */
     margin: 10px 0; /* Space around the paragraph */
-    color: var(--text-color); /* Use a text color variable */
+    /* Use a text color variable */
 }
 
-/* For tablets (768px and below) */
-@media (max-width: 768px) {
-    p {
-        font-size: 15px; /* Slightly smaller font for tablets */
-        line-height: 1.5; /* Adjust line spacing */
-    }
-}
 
-/* For mobile phones (480px and below) */
-@media (max-width: 480px) {
-    p {
-        font-size: 14px; /* Smaller font size for small screens */
-        line-height: 1.4; /* Adjust line spacing */
-        margin: 8px 0; /* Reduce margin */
-    }
-}
