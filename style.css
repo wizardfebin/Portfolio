@@ -811,11 +811,6 @@ a:focus, button:focus {
 }
 
 /* Base styles for paragraph */
-p {
-    font-size: 16px; /* Default font size */
-    line-height: 1.6; /* Improve readability */
-    margin: 10px 0; /* Space around the paragraph */
-    /* Use a text color variable */
-}
+
 
 
