@@ -861,6 +861,8 @@ a:focus, button:focus {
 
     #contact p {
         font-size: 14px; /* Smaller font for paragraphs */
+        word-spacing: normal; /* Normal word spacing */
+        letter-spacing: normal;
     }
     
     /* Adjust padding for small screens */
