@@ -814,3 +814,55 @@ a:focus, button:focus {
 
 
 
+/* Base styles for the contact section */
+#contact {
+    padding: 40px 20px; /* Space around the content */
+    text-align: center; /* Center the text */
+    font-size: 16px; /* Default font size */
+    color: var(--text-color); /* Use a text color variable */
+}
+
+/* Heading styles */
+#contact h2 {
+    font-size: 28px; /* Default font size for heading */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+/* Paragraph styles */
+#contact p {
+    font-size: 16px; /* Default font size for paragraph */
+    margin-bottom: 10px; /* Space between paragraphs */
+}
+
+/* Link styles */
+#contact a.special-link {
+    color: var(--link-color); /* Link color */
+    text-decoration: underline; /* Underline the link */
+}
+
+/* For tablets (768px and below) */
+@media (max-width: 768px) {
+    #contact h2 {
+        font-size: 24px; /* Slightly smaller heading */
+    }
+
+    #contact p {
+        font-size: 15px; /* Smaller font for paragraphs */
+    }
+}
+
+/* For mobile phones (480px and below) */
+@media (max-width: 480px) {
+    #contact h2 {
+        font-size: 20px; /* Smaller font for heading */
+    }
+
+    #contact p {
+        font-size: 14px; /* Smaller font for paragraphs */
+    }
+    
+    /* Adjust padding for small screens */
+    #contact {
+        padding: 30px 15px; 
+    }
+}
