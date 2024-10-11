@@ -424,6 +424,7 @@ body {
     opacity: 0; /* Start hidden */
     position: relative; /* For positioning off-screen */
     transition: transform 0.5s ease, opacity 0.5s ease;
+    
 }
 
 .skill-box.hidden {
@@ -868,5 +869,205 @@ a:focus, button:focus {
     /* Adjust padding for small screens */
     #contact {
         padding: 30px 15px; 
+    }
+}
+
+/* General Reset and Box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set font-sizes and line-heights to be responsive */
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* General Section Styling */
+.section {
+    padding: 2em;
+    text-align: center;
+}
+
+/* Heading Styles */
+h1, h2, h3 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1em;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 1rem;
+    margin-bottom: 1.5em;
+    line-height: 1.8;
+}
+
+/* Image and Social Link Styling */
+.main-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.social-link {
+    font-size: 1rem;
+    margin: 0.5em 0;
+    display: inline-block;
+}
+
+/* Navigation Styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+}
+
+.nav-list li {
+    display: inline;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Project and Skills Section Styling */
+.projects-container, .skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    padding: 1em 0;
+}
+
+.project, .skill-box {
+    width: 100%;
+    max-width: 300px;
+    background-color: #f4f4f4;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5em;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 2em;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Responsive Media Queries */
+
+/* For small devices (phones, less than 600px wide) */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    p, .social-link {
+        font-size: 0.9rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .project, .skill-box {
+        max-width: 90%;
+    }
+}
+
+/* For tablets (between 600px and 1024px wide) */
+@media (min-width: 600px) and (max-width: 1024px) {
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .projects-container, .skill-container {
+        justify-content: space-around;
+    }
+}
+
+/* For larger devices (desktops and laptops) */
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    p, .social-link {
+        font-size: 1.1rem;
+    }
+
+    .project, .skill-box {
+        max-width: 300px;
     }
 }
