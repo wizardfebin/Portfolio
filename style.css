@@ -267,9 +267,7 @@ nav ul li a:hover {
             display: block; /* Show hamburger on mobile */
         }
     
-        header {
-            margin-top: 80px; /* Adjust based on navbar height */
-        }
+        
     }
     /* Media Queries for Responsiveness */
     @media (max-width: 768px) {
