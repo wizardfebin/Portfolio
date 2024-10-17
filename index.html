@@ -6,27 +6,30 @@
 
     <title>Febin Mathew - Website</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
 </head>
 <body>
+  
+
     
     <nav>
-        <button class="hamburger" aria-label="Toggle navigation" onclick="toggleNav()">
-            &#9776; <!-- Hamburger icon -->
-        </button>
+        <button class="hamburger" aria-label="Toggle navigation" onclick="toggleNav()">&#9776;</button>
         <ul class="nav-list">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+            <li><a href="#projects"><i class="fas fa-folder-open"></i> Projects</a></li>
+            <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
             <button id="theme-toggle" style="margin-left: 1%;">🌙</button>
         </ul>
     </nav>
+    
     
     <header>
         <div class="container">
@@ -41,7 +44,8 @@
     
     
     <main>
-        
+        <div class="firefly-container">
+        </div>
         <section id="home" class="section">
             <div class="home-content">
                 <div class="image-container">
@@ -105,64 +109,64 @@
     <div class="skill-container">
         <div class="skill-box">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-icon">
-            <p>Python</p>
+            <p class="skill-text">Python</p>
         </div>
         <div class="skill-box">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" class="skill-icon">
-            <p>Django</p>
+            <p class="skill-text">Django</p>
         </div>
         <div class="skill-box">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" class="skill-icon">
-            <p>Express.js</p>
+            <p class="skill-text">Express.js</p>
         </div>
         <div class="skill-box">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="skill-icon">
-            <p>MongoDB</p>
+            <p class="skill-text">MongoDB</p>
         </div>
         <div class="skill-box">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-icon">
-            <p>HTML5</p>
+            <p class="skill-text">HTML5</p>
         </div>
         <div class="skill-box">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="skill-icon">
-            <p>CSS3</p>
+            <p class="skill-text">CSS3</p>
         </div>
         <div class="skill-box">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-icon">
-            <p>JavaScript</p>
+            <p class="skill-text">JavaScript</p>
         </div>
         <div class="skill-box">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="skill-icon">
-            <p>MySQL</p>
+            <p class="skill-text">MySQL</p>
         </div>
         <div class="skill-box">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="skill-icon">
-            <p>Node.js</p>
+            <p class="skill-text">Node.js</p>
         </div>
         <div class="skill-box">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" class="skill-icon">
-            <p>NumPy</p>
+            <p class="skill-text">NumPy</p>
         </div>
         <div class="skill-box">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" class="skill-icon">
-            <p>Pandas</p>
+            <p class="skill-text">Pandas</p>
         </div>
        
         <div class="skill-box">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="skill-icon">
-            <p>GitHub</p>
+            <p class="skill-text">GitHub</p>
         </div>
         <div class="skill-box">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg" alt="Keras" class="skill-icon">
-            <p>Keras</p>
+            <p class="skill-text">Keras</p>
         </div>
         <div class="skill-box">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" class="skill-icon">
-            <p>PyTorch</p>
+            <p class="skill-text">PyTorch</p>
         </div>
         <div class="skill-box">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" class="skill-icon">
-            <p>TensorFlow</p>
+            <p class="skill-text">TensorFlow</p>
         </div>
        
     </div>
@@ -170,7 +174,7 @@
         
         <section id="contact" class="section">
             <h2>Contact Me</h2>
-            <p>You can reach me at<a href="mailto:fbnmthw2000@gmail.com" class="special-link">fbnmthw2000@gmail.com</a>.</p>
+            <p>You can reach me at <a href="mailto:fbnmthw2000@gmail.com" class="special-link">fbnmthw2000@gmail.com</a>.</p>
             <p>Contact: 8606536474</p>
         </section>
     </main>
@@ -178,5 +182,6 @@
         <p>&copy; 2024 My Portfolio</p>
     </footer>
     <script src="script.js"></script>
+
 </body>
 </html>
