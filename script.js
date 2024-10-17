@@ -79,12 +79,12 @@ toggleButton.addEventListener('click', () => {
 
 
 // Theme toggle function
-function toggleNav() {
-    const body = document.body;
-    body.classList.toggle('light-theme'); // Toggle the light-theme class
-    const themeToggleButton = document.getElementById('theme-toggle');
-    themeToggleButton.textContent = body.classList.contains('light-theme') ? '🌙' : '☀️'; // Change button text
-}
+// function toggleNav() {
+//     const body = document.body;
+//     body.classList.toggle('light-theme'); // Toggle the light-theme class
+//     const themeToggleButton = document.getElementById('theme-toggle');
+//     themeToggleButton.textContent = body.classList.contains('light-theme') ? '🌙' : '☀️'; // Change button text
+// }
 
 
 // Function to animate skill boxes
