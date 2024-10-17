@@ -22,10 +22,10 @@ toggleButton.addEventListener('click', () => {
         toggleButton.innerHTML = "🌞"; // Moon icon for dark mode
     }
 });
-function toggleNav() {
-    const navList = document.querySelector('.nav-list');
-    navList.classList.toggle('active'); // Toggle the active class to show/hide
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    hamburger.addEventListener('click', toggleNav);
+});
 
 // Function to create fireflies
 // function createFireflies() {
@@ -135,4 +135,18 @@ window.onscroll = function() {
 };
 
 
+function toggleNav() {
+    const navList = document.querySelector('.nav-list');
+    if (navList) {
+        navList.classList.toggle('active'); // Toggle the active class to show/hide
+        console.log(navList.classList.contains('active')); // Log the state for debugging
+    } else {
+        console.error('nav-list not found'); // Log error if nav-list is not found
+    }
+}
 
+// Ensure to call this function after DOM has loaded
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    hamburger.addEventListener('click', toggleNav);
+});

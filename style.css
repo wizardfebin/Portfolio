@@ -190,7 +190,14 @@ nav ul li a {
     display: inline-block; /* This ensures the underline is limited to the text */
 
 }
-
+header {
+    background: var(--header-bg);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    margin-top: 70px; /* Adjust based on navbar height */
+    z-index: 999; /* Ensure it stays below the navbar */
+}
 
 
 /* Change Text Color on Hover (Optional) */
@@ -201,103 +208,99 @@ nav ul li a:hover {
 
     text-shadow: 0 0 1px  var(--link-hover-color), 
     0 0 10px  var(--link-hover-color); }
-nav {
-    background: var(--nav-bg);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* Ensure the navbar stays above other content */
-    transition: background-color 0.3s;
-}
-
-.nav-list {
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center items */
-    padding: 10px 0;
-    list-style: none; /* Remove bullet points */
-    margin: 0; /* No margin */
-}
-
-/* Hamburger Button */
-
-/* Header Styles */
-header {
-    background: var(--header-bg);
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    margin-top: 70px; /* Adjust based on navbar height */
-    z-index: 999; /* Ensure it stays below the navbar */
-}
-.hamburger {
-    display: none; /* Hide hamburger by default */
-    font-size: 24px; /* Size of the hamburger icon */
-    background: none; /* No background */
-    border: none; /* No border */
-    cursor: pointer; /* Pointer cursor on hover */
-    color: #fff; /* Change to your desired color */
-}
-
-
-/* Responsive Styles */
-@media (max-width: 768px) {
+    nav {
+        background: var(--nav-bg);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* Ensure the navbar stays above other content */
+        transition: background-color 0.3s;
+    }
+    
     .nav-list {
-        display: none; /* Hide the nav list initially */
-        flex-direction: column; /* Stack items vertically */
-        background: #333; /* Background color */
-        position: absolute; /* Position absolutely */
-        top: 60px; /* Adjust this based on navbar height */
-        width: 100%; /* Full width */
-        left: 0; /* Align to the left */
-        z-index: 999; /* Above other content */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center items */
+        padding: 10px 0;
+        list-style: none; /* Remove bullet points */
+        margin: 0; /* No margin */
     }
-
-    .nav-list.active {
-        display: flex; /* Show when active */
-    }
-
+    
+    /* Hamburger Button */
     .hamburger {
-        display: block; /* Show hamburger on mobile */
+        display: none; /* Hide hamburger by default */
+        font-size: 24px; /* Size of the hamburger icon */
+        background: none; /* No background */
+        border: none; /* No border */
+        cursor: pointer; /* Pointer cursor on hover */
+        color: #fff; /* Change to your desired color */
     }
-}.nav-list {
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center items */
-    padding: 10px 0;
-    list-style: none; /* Remove bullet points */
-    margin: 0; /* No margin */
-}
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    nav .nav-list {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items */
-        padding: 10px; /* Padding around the navbar */
+    
+    /* Header Styles */
+    header {
+        background: var(--header-bg);
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        margin-top: 70px; /* Adjust based on navbar height */
+        z-index: 999; /* Ensure it stays below the navbar */
     }
-
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .nav-list {
+            display: none; /* Hide the nav list initially */
+            flex-direction: column; /* Stack items vertically */
+            background: var(--nav-bg); /* Background color */
+            position: absolute; /* Position absolutely */
+            top: 60px; /* Adjust this based on navbar height */
+            width: 100%; /* Full width */
+            left: 0; /* Align to the left */
+            z-index: 999; /* Above other content */
+        }
+    
+        .nav-list.active {
+            display: flex; /* Show when active */
+        }
+    
+        .hamburger {
+            display: block; /* Show hamburger on mobile */
+        }
+    
+        header {
+            margin-top: 80px; /* Adjust based on navbar height */
+        }
+    }
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+        nav .nav-list {
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items */
+            padding: 10px; /* Padding around the navbar */
+        }
+    
+        nav ul li {
+            margin: 5px 0; /* Vertical margin for spacing */
+        }
+    
+        nav ul li a {
+            font-size: 16px; /* Smaller font size on mobile */
+        }
+    } 
+    /* Navbar Item Styles */
     nav ul li {
-        margin: 5px 0; /* Vertical margin for spacing */
+        margin: 3px 0; /* Vertical spacing for stacked items */
     }
-
+    
+    /* Navbar Link Styles */
     nav ul li a {
-        font-size: 16px; /* Smaller font size on mobile */
+        text-decoration: none; /* No underline */
+        font-size: 18px; /* Adjusts font size */
+        color: var(--link-color); /* Text color from variable */
+        font-weight: bold; /* Bold text */
+        transition: color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
     }
-}
-
-/* Navbar Item Styles */
-nav ul li {
-    margin: 3px 0; /* Vertical spacing for stacked items */
-}
-
-/* Navbar Link Styles */
-nav ul li a {
-    text-decoration: none; /* No underline */
-    font-size: 18px; /* Adjusts font size */
-    color: var(--link-color); /* Text color from variable */
-    font-weight: bold; /* Bold text */
-    transition: color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
-}
-
+    
 nav ul li a:hover{
     color: var(--link-hover-color); /* Change text color on hover */
 }
