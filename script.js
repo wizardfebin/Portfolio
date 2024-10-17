@@ -22,6 +22,70 @@ toggleButton.addEventListener('click', () => {
         toggleButton.innerHTML = "🌞"; // Moon icon for dark mode
     }
 });
+// Function to create fireflies
+// function createFireflies() {
+//     const container = document.querySelector('.firefly-container');
+
+//     for (let i = 0; i < 10; i++) { // Create 10 fireflies
+//         const firefly = document.createElement('div');
+//         firefly.classList.add('firefly');
+
+//         // Set random initial position
+//         firefly.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+//         firefly.style.top = Math.random() * 100 + 'vh'; // Random vertical position
+        
+//         // Random animation properties
+//         firefly.style.animationDuration = (Math.random() * 2 + 1) + 's'; // Duration between 1s and 3s
+//         firefly.style.animationDelay = Math.random() * 2 + 's'; // Delay between 0s and 2s
+
+//         // Animate movement across the screen
+//         animateFirefly(firefly);
+
+//         container.appendChild(firefly);
+//     }
+// }
+
+// // Function to animate firefly movement
+// function animateFirefly(firefly) {
+//     // Initial random position
+//     const randomX = Math.random() * 100; // Random X target
+//     const randomY = Math.random() * 100; // Random Y target
+//     const animationDuration = (Math.random() * 5 + 2) + 's'; // Random duration for movement
+
+//     // Set firefly to move to the random target position
+//     firefly.animate([
+//         { transform: 'translate(0, 0)' }, // Start position
+//         { transform: `translate(${randomX/2}vw, ${randomY/2}vh)` } // End position
+//     ],  {
+//         duration: parseFloat(firefly.style.animationDuration) * 1000, // Convert to milliseconds
+//         iterations: Infinity, // Repeat indefinitely
+//         easing: 'ease-in-out' // Easing for smooth movement
+//     });
+// }
+
+
+
+// // Update fireflies on scroll
+// window.addEventListener('scroll', function () {
+//     const fireflies = document.querySelectorAll('.firefly');
+//     fireflies.forEach(firefly => {
+//         const scrollY = window.scrollY; // Get scroll position
+//         firefly.style.transform = `transla   teY(${scrollY}px)`; // Move fireflies down with scroll
+//     });
+// });
+
+// // Call the function on page load
+// window.onload = createFireflies;
+
+
+// Theme toggle function
+function toggleNav() {
+    const body = document.body;
+    body.classList.toggle('light-theme'); // Toggle the light-theme class
+    const themeToggleButton = document.getElementById('theme-toggle');
+    themeToggleButton.textContent = body.classList.contains('light-theme') ? '🌙' : '☀️'; // Change button text
+}
+
 
 // Function to animate skill boxes
 // Function to animate skill boxes
