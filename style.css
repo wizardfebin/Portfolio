@@ -220,14 +220,6 @@ nav {
 }
 
 /* Hamburger Button */
-.hamburger {
-    display: none; /* Hide hamburger by default */
-    font-size: 24px; /* Size of the hamburger icon */
-    background: none; /* No background */
-    border: none; /* No border */
-    cursor: pointer; /* Pointer cursor on hover */
-    color: #fff; /* Change to your desired color */
-}
 
 /* Header Styles */
 header {
@@ -238,6 +230,15 @@ header {
     margin-top: 70px; /* Adjust based on navbar height */
     z-index: 999; /* Ensure it stays below the navbar */
 }
+.hamburger {
+    display: none; /* Hide hamburger by default */
+    font-size: 24px; /* Size of the hamburger icon */
+    background: none; /* No background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    color: #fff; /* Change to your desired color */
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
