@@ -245,7 +245,7 @@ header {
     .nav-list {
         display: none; /* Hide the nav list initially */
         flex-direction: column; /* Stack items vertically */
-        background: var(--nav-bg); /* Background color */
+        background: #333; /* Background color */
         position: absolute; /* Position absolutely */
         top: 60px; /* Adjust this based on navbar height */
         width: 100%; /* Full width */
@@ -260,12 +260,7 @@ header {
     .hamburger {
         display: block; /* Show hamburger on mobile */
     }
-
-    header {
-        margin-top: 80px; /* Adjust based on navbar height */
-    }
-}
-.nav-list {
+}.nav-list {
     display: flex; /* Use flexbox for layout */
     justify-content: center; /* Center items */
     padding: 10px 0;
