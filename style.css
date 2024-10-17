@@ -304,7 +304,7 @@ nav ul li a:hover{
 }
 /* Body Margin to Prevent Content from Hiding Behind the Navbar */
 body {
-    margin-top: 60px; /* Adjust this to match your navbar height */
+    margin-top: 20px; /* Adjust this to match your navbar height */
 }
 
 /* Optional: Change navbar background color on scroll */
